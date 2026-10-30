@@ -1,7 +1,7 @@
 # Atividade POO(Programação Orientada a Objetos) · Plataforma de Estudos do Projeto Interdisciplinar
 
 As 10 missões de Programação Orientada a Objetos resolvidas em **JavaScript** (classes ES2022, campos privados `#`),
-com testes automatizados, demonstração no terminal e tela em HTML5 + CSS3 + DOM. Não há dependências: basta o
+com testes automatizados, demonstração no terminal e tela em HTML5 + CSS3 + DOM. Não há dependências: basta os
 Node.js 18 ou mais novo.
 
 ## Como rodar
