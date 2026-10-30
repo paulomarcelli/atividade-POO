@@ -1,0 +1,16 @@
+{
+  "name": "atividade-poo",
+  "version": "1.0.0",
+  "description": "Plataforma de estudos do Projeto Interdisciplinar: as 10 missões de Programação Orientada a Objetos em JavaScript.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "demo": "node src/main.js",
+    "start": "node scripts/servidor.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma de Estudos · PI</title>
+    <link rel="stylesheet" href="./estilos.css" />
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <header class="topo">
+      <h1>Plataforma de Estudos</h1>
+      <p class="subtitulo">Projeto Interdisciplinar · POO</p>
+    </header>
+
+    <main class="grade">
+      <!-- Cabeçalho de perfil: gerarPainelResumo() de cada perfil (polimorfismo) -->
+      <section class="cartao perfis" aria-labelledby="titulo-perfis">
+        <h2 id="titulo-perfis">Perfis</h2>
+        <p class="perfil" data-perfil="discente"></p>
+        <p class="perfil" data-perfil="responsavel"></p>
+      </section>
+
+      <!-- Formulário de nova sessão -->
+      <section class="cartao" aria-labelledby="titulo-sessao">
+        <h2 id="titulo-sessao">Nova sessão de estudo</h2>
+        <form id="form-sessao" novalidate>
+          <label>
+            Disciplina
+            <select name="disciplina" required></select>
+          </label>
+
+          <label>
+            Modalidade
+            <select name="modalidade" required>
+              <option value="pomodoro">Pomodoro</option>
+              <option value="exercicios">Exercícios</option>
+              <option value="leitura">Leitura</option>
+            </select>
+          </label>
+
+          <div class="linha">
+            <label>
+              Duração (min)
+              <input name="duracao" type="number" min="1" max="480" step="1" value="50" required />
+            </label>
+            <label>
+              <span data-rotulo-extra>Ciclos completos</span>
+              <input name="extra" type="number" min="0" step="1" value="2" required />
+            </label>
+          </div>
+
+          <label data-so-para="exercicios" hidden>
+            Total de questões
+            <input name="totalQuestoes" type="number" min="1" step="1" value="10" />
+          </label>
+
+          <label class="opcao" data-so-para="leitura" hidden>
+            <input name="fezResumo" type="checkbox" checked />
+            Fiz o resumo do capítulo
+          </label>
+
+          <p class="erro" role="alert" data-erro></p>
+          <button type="submit" class="botao botao-principal">Registrar Estudo</button>
+        </form>
+      </section>
+
+      <!-- Meta, histórico e alerta ao responsável -->
+      <section class="cartao" aria-labelledby="titulo-meta">
+        <h2 id="titulo-meta">Meta semanal</h2>
+        <div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-labelledby="titulo-meta">
+          <div class="barra-preenchida" data-barra></div>
+        </div>
+        <p class="legenda" data-legenda-meta></p>
+
+        <h3>Histórico</h3>
+        <ol class="historico" data-historico></ol>
+        <p class="vazio" data-historico-vazio>Nenhuma sessão registrada ainda.</p>
+
+        <button type="button" class="botao" data-notificar>Notificar Responsável</button>
+      </section>
+
+      <!-- Missão 10: dados gravados no backend -->
+      <section class="cartao" aria-labelledby="titulo-servidor">
+        <h2 id="titulo-servidor">Servidor (BackendEstudoAPI)</h2>
+        <p class="legenda" data-status-servidor>Endereço: http://localhost:5080</p>
+        <div class="acoes">
+          <button type="button" class="botao" data-carregar-servidor>Carregar Histórico do Servidor</button>
+          <button type="button" class="botao" data-carregar-relatorio>Relatório do Discente</button>
+        </div>
+        <ol class="historico" data-historico-servidor></ol>
+      </section>
+    </main>
+
+    <div class="avisos" aria-live="polite" data-avisos></div>
+  </body>
+</html>
