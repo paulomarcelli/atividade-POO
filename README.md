@@ -1,3 +1,13 @@
+<div align="center">
+
+<img src="docs/banner.svg" alt="Atividade POO: as 10 missões em JavaScript" width="100%" />
+
+![JavaScript](https://img.shields.io/badge/JavaScript-1a0508?style=for-the-badge&logo=javascript&logoColor=ff1f3d&labelColor=0a0204)
+![Node.js](https://img.shields.io/badge/Node.js_18+-1a0508?style=for-the-badge&logo=nodedotjs&logoColor=ff1f3d&labelColor=0a0204)
+![Testes](https://img.shields.io/badge/node:test-29_testes-1a0508?style=for-the-badge&labelColor=0a0204&color=7a0a1c)
+
+</div>
+
 # Atividade POO(Programação Orientada a Objetos) · Plataforma de Estudos do Projeto Interdisciplinar
 
 As 10 missões de Programação Orientada a Objetos resolvidas em **JavaScript** (classes ES2022, campos privados `#`),
@@ -89,3 +99,5 @@ O enunciado é escrito pensando em C#. Em JavaScript, algumas coisas precisam de
 - [x] **Interfaces:** `INotificador` e `IExportavelJson` implementadas e usadas.
 - [x] **Relacionamentos UML:** associação, agregação, composição e dependência.
 - [x] **Tela visual + backend:** a tela envia `POST /api/sessoes` para `http://localhost:5080`.
+
+<div align="center"><sub>Parte do <a href="https://github.com/paulomarcelli/Projetos">grimório de projetos</a> do Paulo Marcelli.</sub></div>
